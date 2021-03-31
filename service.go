@@ -17,7 +17,8 @@ func Serve() error {
 	if err != nil {
 		return err
 	}
-	defer http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
+	fmt.Printf("listen on %d\n",port)
+	http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
 	return nil
 }
 
